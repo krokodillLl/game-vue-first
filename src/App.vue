@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <img class="logo" alt="Vue logo" src="./assets/logo.png">
+    <h1 class="h1">Open all cubes</h1>
+    <p class="h1">Remember and match all same cubes</p>
+
+    <BoardComponent />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import BoardComponent from './components/BoardComponent';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BoardComponent,
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.app {
+  font-family: Helvetica Neue, sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 40px;
+}
+.logo {
+  width: 100px;
 }
 </style>
